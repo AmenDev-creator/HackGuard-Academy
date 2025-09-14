@@ -1,69 +1,39 @@
-# React + TypeScript + Vite
+# 🛡️ HackGuard Academy  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+HackGuard Academy is a **Cyber Security Learning Platform** offering both free and paid courses.  
+Built with **React + TypeScript + TailwindCSS**, and powered by **Firebase (Auth, Firestore, Hosting)**.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- 🔑 Authentication: Signup/Login with Email + Google + Phone OTP
+- 📊 User Dashboard: Courses, Labs, Achievements, Progress Charts
+- 📝 Audit Logs: Track user activity (login, enrollments, lab attempts)
+- 📰 Cyber News Feed: Security updates with AI summaries
+- 🎓 Course System: Free & Paid plans with detailed tools and labs
+- 🌙 Dark/Light Mode Toggle
+- 🔒 Secure Firebase integration with OTP verification  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📂 Tech Stack
+- **Frontend:** React + TypeScript + TailwindCSS  
+- **Backend/DB:** Firebase Auth + Firestore  
+- **Hosting:** Firebase Hosting  
+- **Charts & UI:** Recharts / Chart.js + shadcn/ui  
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🔧 Installation
+```bash
+# Clone the repo
+git clone https://github.com/username/HackGuard-Academy.git
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Enter project folder
+cd HackGuard-Academy
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# Install dependencies
+npm install
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Run locally
+npm run dev
