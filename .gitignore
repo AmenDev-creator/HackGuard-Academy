@@ -47,3 +47,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# firebase local files
+.firebase/
+firebase-debug.log
