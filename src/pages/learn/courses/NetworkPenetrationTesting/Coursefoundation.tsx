@@ -1,0 +1,360 @@
+import { useState, useEffect, useRef } from "react";
+import { ChevronDown, ChevronRight, Play } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useParams } from "react-router";
+import { courses } from "../../../../data/courses";
+import { db } from "../../../../firebaseConfig";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { useAuth } from "../../../../contexts/useAuth";
+import Quiz from "../../../../components/Quiz";
+import Circletracker from "./Circletracker";
+
+declare global {
+  interface Window {
+    YT: any;
+    onYouTubeIframeAPIReady: () => void;
+  }
+}
+
+interface LessonVideo {
+  id: string;
+  title: string;
+  videoUrl: string;
+}
+
+interface ChapterVideos {
+  id: string;
+  title: string;
+  lessons: LessonVideo[];
+}
+
+const courseVideos: ChapterVideos[] = [
+  {
+    id: "chapter-1",
+    title: "The Penetration Testing Lifecycle",
+    lessons: [
+      {
+        id: "lesson-1-1",
+        title: "Scoping and Reconnaissance",
+        videoUrl: "https://www.youtube.com/watch?v=f5G7gAzCRe8"
+      },
+      {
+        id: "lesson-1-2",
+        title: "Scanning and Enumeration",
+        videoUrl: "https://www.youtube.com/watch?v=5E3N6zFEXsM"
+      },
+      {
+        id: "lesson-1-3",
+        title: "Vulnerability Analysis",
+        videoUrl: "https://www.youtube.com/watch?v=fMCj50TMLv8"
+      },
+      {
+        id: "lesson-1-4",
+        title: "Gaining Access and Exploitation",
+        videoUrl: "https://www.youtube.com/watch?v=0k1tbfLvSBY"
+      },
+      {
+        id: "lesson-1-5",
+        title: "Post-Exploitation and Reporting",
+        videoUrl: "https://www.youtube.com/watch?v=cfmK6lIYYJA"
+      }
+    ]
+  },
+  {
+    id: "chapter-2",
+    title: "Tools and Techniques",
+    lessons: [
+      {
+        id: "lesson-2-1",
+        title: "Introduction to Kali Linux",
+        videoUrl: "https://www.youtube.com/watch?v=8z7e-5mO2Yc"
+      },
+      {
+        id: "lesson-2-2",
+        title: "Advanced Nmap Techniques",
+        videoUrl: "https://www.youtube.com/watch?v=NY6j6kG1BBY"
+      },
+      {
+        id: "lesson-2-3",
+        title: "Exploitation with Metasploit",
+        videoUrl: "https://www.youtube.com/watch?v=nI4V68LQy4o"
+      },
+      {
+        id: "lesson-2-4",
+        title: "Password Attacks",
+        videoUrl: "https://www.youtube.com/watch?v=zUM7i5u1Y2U"
+      },
+      {
+        id: "lesson-2-5",
+        title: "Social Engineering and Phishing",
+        videoUrl: "https://www.youtube.com/watch?v=iq1y3jVb8h8"
+      }
+    ]
+  },
+  {
+    id: "chapter-3",
+    title: "Advanced Network Attacks",
+    lessons: [
+      {
+        id: "lesson-3-1",
+        title: "MITM and Packet Sniffing",
+        videoUrl: "https://www.youtube.com/watch?v=TkCSr30UojM"
+      },
+      {
+        id: "lesson-3-2",
+        title: "Wireless Network Hacking",
+        videoUrl: "https://www.youtube.com/watch?v=w7fslZzL-FQ"
+      },
+      {
+        id: "lesson-3-3",
+        title: "Bypassing Firewalls and IDS",
+        videoUrl: "https://www.youtube.com/watch?v=Qg5pEJkF49w"
+      },
+      {
+        id: "lesson-3-4",
+        title: "Pivoting and Lateral Movement",
+        videoUrl: "https://www.youtube.com/watch?v=pTeW7m7zKIM"
+      },
+      {
+        id: "lesson-3-5",
+        title: "DoS and DDoS Attacks",
+        videoUrl: "https://www.youtube.com/watch?v=22RkG4v5v14"
+      },
+      {
+        id: "lesson-3-6",
+        title: "Tools of the Trade",
+        videoUrl: "https://www.youtube.com/watch?v=yeEw6pXjGZc"
+      }
+    ]
+  }
+];
+
+export default function Coursefoundation() {
+  const { id } = useParams<{ id: string }>();
+  const [expandedChapters, setExpandedChapters] = useState<Set<string>>(new Set(["chapter-1"]));
+  const [currentLesson, setCurrentLesson] = useState<LessonVideo | null>(courseVideos[0].lessons[0]);
+  const [lessonProgresses, setLessonProgresses] = useState<Record<string, number>>({});
+  const playerRef = useRef<HTMLDivElement>(null);
+
+  const { currentUser } = useAuth();
+  const course = courses.find(c => c.id === parseInt(id || "3"));
+
+  // Fetch progress from Firestore
+  useEffect(() => {
+    const fetchProgress = async () => {
+      if (!currentUser || !course) {
+        return;
+      }
+
+      try {
+        const progressRef = doc(db, "userProgress", currentUser.uid);
+        const progressSnap = await getDoc(progressRef);
+
+        if (progressSnap.exists()) {
+          const data = progressSnap.data();
+          const courseProgress = data.courses?.[course.courseId] || {};
+
+          if (courseProgress.completedLessons) {
+            // Progress calculation removed as progressPercent is not used
+          }
+
+          const lessonProgressesData = courseProgress.lessonProgresses || {};
+          setLessonProgresses(lessonProgressesData);
+        }
+      } catch (error) {
+        console.error("Error fetching progress:", error);
+      }
+    };
+
+    fetchProgress();
+  }, [currentUser, course]);
+
+  const saveProgress = async (lessonId: string, progress: number) => {
+    if (!currentUser || !course) return;
+    try {
+      const progressRef = doc(db, "userProgress", currentUser.uid);
+      const currentData = (await getDoc(progressRef)).data() || {};
+      const courseProgress = currentData.courses?.[course.courseId] || {};
+      const updatedLessonProgresses = { ...courseProgress.lessonProgresses, [lessonId]: progress };
+
+      // Update completedLessons based on progress
+      const currentCompletedLessons = courseProgress.completedLessons || [];
+      let updatedCompletedLessons = [...currentCompletedLessons];
+      if (progress >= 100) {
+        if (!updatedCompletedLessons.includes(lessonId)) {
+          updatedCompletedLessons.push(lessonId);
+        }
+      } else {
+        updatedCompletedLessons = updatedCompletedLessons.filter(id => id !== lessonId);
+      }
+
+      await updateDoc(progressRef, {
+        [`courses.${course.courseId}.lessonProgresses`]: updatedLessonProgresses,
+        [`courses.${course.courseId}.completedLessons`]: updatedCompletedLessons
+      });
+    } catch (error) {
+      console.error("Error saving progress:", error);
+    }
+  };
+
+  // Load YouTube API
+  useEffect(() => {
+    if (!window.YT) {
+      const script = document.createElement('script');
+      script.src = 'https://www.youtube.com/iframe_api';
+      document.body.appendChild(script);
+    }
+  }, []);
+
+  // Create/destroy player
+  useEffect(() => {
+    if (currentLesson && window.YT && window.YT.Player && playerRef.current) {
+      const videoId = getVideoId(currentLesson.videoUrl);
+      const newPlayer = new window.YT.Player(playerRef.current, {
+        videoId,
+        events: {
+          onReady: () => {
+            const interval = setInterval(() => {
+              if (newPlayer && newPlayer.getCurrentTime && newPlayer.getDuration) {
+                const current = newPlayer.getCurrentTime();
+                const duration = newPlayer.getDuration();
+                if (duration > 0) {
+                  const progress = (current / duration) * 100;
+                  setLessonProgresses(prev => ({ ...prev, [currentLesson.id]: progress }));
+                  saveProgress(currentLesson.id, progress);
+                }
+              }
+            }, 1000);
+            (newPlayer as any).progressInterval = interval;
+          },
+          onStateChange: (event: any) => {
+            if (event.data === window.YT.PlayerState.ENDED) {
+              setLessonProgresses(prev => ({ ...prev, [currentLesson.id]: 100 }));
+              saveProgress(currentLesson.id, 100);
+            }
+          }
+        }
+      });
+      return () => {
+        if (newPlayer && (newPlayer as any).progressInterval) {
+          clearInterval((newPlayer as any).progressInterval);
+        }
+        newPlayer.destroy();
+      };
+    }
+  }, [currentLesson]);
+
+  if (!course) return <div>Course not found</div>;
+
+
+  const toggleChapter = (chapterId: string) => {
+    const newExpanded = new Set(expandedChapters);
+    if (newExpanded.has(chapterId)) {
+      newExpanded.delete(chapterId);
+    } else {
+      newExpanded.add(chapterId);
+    }
+    setExpandedChapters(newExpanded);
+  };
+
+  const selectLesson = (lesson: LessonVideo) => {
+    setCurrentLesson(lesson);
+  };
+
+  const getVideoId = (url: string) => {
+    const match = url.match(/[?&]v=([^#\&\?]*).*/);
+    return match && match[1];
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto p-6">
+        {/* Header */}
+        <div className="bg-white rounded-2xl shadow-lg p-6 mb-6">
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">{course.title} - Course Foundation</h1>
+          <p className="text-gray-600">Interactive learning experience with video lessons</p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {/* Left Sidebar - Course Lessons */}
+          <div className="lg:col-span-1">
+            <div className="bg-white rounded-2xl shadow-lg p-6">
+              <h2 className="text-xl font-bold text-gray-900 mb-4">Course Curriculum</h2>
+
+              <div className="space-y-3 max-h-96 overflow-y-auto">
+                {courseVideos.map((chapter) => (
+                  <div key={chapter.id} className="border border-gray-200 rounded-lg overflow-hidden">
+                    <button
+                      onClick={() => toggleChapter(chapter.id)}
+                      className="w-full flex items-center justify-between p-3 hover:bg-gray-50 transition-colors bg-gray-50"
+                    >
+                      <span className="font-semibold text-left text-gray-900 text-sm">{chapter.title}</span>
+                      {expandedChapters.has(chapter.id) ? (
+                        <ChevronDown size={16} className="text-gray-500" />
+                      ) : (
+                        <ChevronRight size={16} className="text-gray-500" />
+                      )}
+                    </button>
+                    <AnimatePresence>
+                      {expandedChapters.has(chapter.id) && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="border-t border-gray-100"
+                        >
+                          <div className="p-3 space-y-2">
+                            {chapter.lessons.map((lesson) => (
+                              <button
+                                key={lesson.id}
+                                onClick={() => selectLesson(lesson)}
+                                className={`w-full flex items-center gap-2 p-2 rounded-lg text-left transition-colors ${
+                                  currentLesson?.id === lesson.id
+                                    ? 'bg-lime-100 text-lime-700 border border-lime-300'
+                                    : 'hover:bg-gray-100 text-gray-700'
+                                }`}
+                              >
+                                <Play size={14} className="flex-shrink-0" />
+                                <Circletracker progress={lessonProgresses[lesson.id] || 0} />
+                                <span className="text-sm font-medium">{lesson.title}</span>
+                              </button>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side - Video Container */}
+          <div className="lg:col-span-2">
+            <div className="bg-white rounded-2xl shadow-lg p-6">
+              {currentLesson ? (
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{currentLesson.title}</h3>
+                  <div className="aspect-video bg-black rounded-lg overflow-hidden">
+                    <div ref={playerRef} className="w-full h-full"></div>
+                  </div>
+                </div>
+              ) : (
+                <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
+                  <div className="text-center">
+                    <Play size={48} className="mx-auto text-gray-400 mb-4" />
+                    <p className="text-gray-600">Select a lesson to start watching</p>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Course Quiz */}
+        <Quiz quiz={course.quiz} isLocked={false} courseId={course.courseId} />
+      </div>
+    </div>
+  );
+}

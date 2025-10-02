@@ -1,0 +1,343 @@
+
+## 1. Introduction to Cyber Security
+
+### Chapter 1: Foundations of Cybersecurity
+
+* **Lesson 1.1: Defining Cybersecurity**
+  🎥 [What is Cybersecurity? | IBM Technology](https://www.youtube.com/watch?v=inWWhr5tnEA)
+
+* **Lesson 1.2: The CIA Triad**
+  🎥 [The CIA Triad - CompTIA Security+ | Professor Messer](https://www.youtube.com/watch?v=SBcDGb9l6yo)
+
+* **Lesson 1.3: Threat Actors and Attack Vectors**
+  🎥 [Types of Hackers & Threat Actors Explained | Simplilearn](https://www.youtube.com/watch?v=w7x1a1v3vUU)
+
+* **Lesson 1.4: The Kill Chain and ATT&CK Frameworks**
+  🎥 [MITRE ATT&CK Framework Explained | John Hammond](https://www.youtube.com/watch?v=WnK5i2l4-g0)
+
+* **Lesson 1.5: Legal and Ethical Considerations**
+  🎥 [Cybersecurity Ethics and Laws | EC-Council](https://www.youtube.com/watch?v=SVZfNnAD6jE)
+
+### Chapter 2: Security Controls and Best Practices
+
+* **Lesson 2.1: Types of Security Controls**
+  🎥 [Security Controls Explained | Mike Chapple](https://www.youtube.com/watch?v=wYiJWfZ9n0o)
+
+* **Lesson 2.2: Cryptography Fundamentals**
+  🎥 [Cryptography Basics | Computerphile](https://www.youtube.com/watch?v=6v8DJ19y_8w)
+
+* **Lesson 2.3: Network Security Basics**
+  🎥 [Firewalls, IDS, VPNs Explained | Simplilearn](https://www.youtube.com/watch?v=ffD8cNe8vNk)
+
+* **Lesson 2.4: Endpoint Security**
+  🎥 [What is Endpoint Security? | Fortinet](https://www.youtube.com/watch?v=fJULk7BlcTs)
+
+* **Lesson 2.5: Physical Security Measures**
+  🎥 [Physical Security in Cybersecurity | Cybrary](https://www.youtube.com/watch?v=1sJ5EoGf6S8)
+
+### Chapter 3: Risk Management and Incident Response
+
+* **Lesson 3.1: Introduction to Risk Management**
+  🎥 [Cybersecurity Risk Assessment Step by Step | TechTarget](https://www.youtube.com/watch?v=spBvssOUTbM)
+
+* **Lesson 3.2: Business Continuity and Disaster Recovery**
+  🎥 [BCP & DRP Explained | EC-Council](https://www.youtube.com/watch?v=8Hg1bmFqZ8E)
+
+* **Lesson 3.3: The Incident Response Lifecycle**
+  🎥 [Incident Response Explained | IBM Technology](https://www.youtube.com/watch?v=1rL7a6fZluQ)
+
+* **Lesson 3.4: Digital Forensics Fundamentals**
+  🎥 [What is Digital Forensics? | The Cyber Mentor](https://www.youtube.com/watch?v=6WUvS6b8nSM)
+
+* **Lesson 3.5: Tools of the Trade: Shell and Nmap**
+  🎥 [Nmap Tutorial for Beginners | NetworkChuck](https://www.youtube.com/watch?v=5E3N6zFEXsM)
+
+---
+
+## 2. Web Application Security
+
+### Chapter 1: Understanding Web Application Vulnerabilities
+
+* **Lesson 1.1: The OWASP Top 10**
+  🎥 [OWASP Top 10 Explained | Simply Cyber](https://www.youtube.com/watch?v=pJ3IPRqiD2E)
+
+* **Lesson 1.2: Injection Attacks**
+  🎥 [SQL Injection Explained | The Cyber Mentor](https://www.youtube.com/watch?v=ciNHn38EyRc)
+
+* **Lesson 1.3: Cross-Site Scripting (XSS)**
+  🎥 [XSS Explained with Examples | HackerSploit](https://www.youtube.com/watch?v=EoaDgUgS6QA)
+
+* **Lesson 1.4: Broken Authentication**
+  🎥 [Broken Authentication Explained | OWASP](https://www.youtube.com/watch?v=vSJLt4mJqZs)
+
+* **Lesson 1.5: Security Misconfigurations**
+  🎥 [Security Misconfigurations | Simply Cyber](https://www.youtube.com/watch?v=QfU-Ex9lD2o)
+
+### Chapter 2: Attacking and Defending Web Applications
+
+* **Lesson 2.1: Reconnaissance and Enumeration**
+  🎥 [Web Reconnaissance Techniques | The Cyber Mentor](https://www.youtube.com/watch?v=hLQHT7vAeqg)
+
+* **Lesson 2.2: Manual vs Automated Testing**
+  🎥 [Burp Suite Basics Tutorial | HackerSploit](https://www.youtube.com/watch?v=u6E1wsVOkaw)
+
+* **Lesson 2.3: Exploitation Techniques**
+  🎥 [Exploiting Web Apps | IppSec](https://www.youtube.com/watch?v=VXc_FV_UH2c)
+
+* **Lesson 2.4: Secure Coding Practices**
+  🎥 [Secure Coding Explained | OWASP](https://www.youtube.com/watch?v=VWlT0l6oXOk)
+
+* **Lesson 2.5: Input Validation and Parameterized Queries**
+  🎥 [Prevent SQL Injection with Parameterized Queries | ProgrammingKnowledge](https://www.youtube.com/watch?v=lEn6s5d8l7c)
+
+### Chapter 3: Advanced Topics and Protection
+
+* **Lesson 3.1: API Security**
+  🎥 [API Security Best Practices | OWASP](https://www.youtube.com/watch?v=8z2Z_sVWlUU)
+
+* **Lesson 3.2: Web Application Firewalls**
+  🎥 [WAF Explained | Simplilearn](https://www.youtube.com/watch?v=IMN9jX3Oyeo)
+
+* **Lesson 3.3: CSP and HTTP Security Headers**
+  🎥 [Content Security Policy Explained | Google Chrome Dev](https://www.youtube.com/watch?v=9h7WIMy8U7c)
+
+* **Lesson 3.4: SSRF and CSRF**
+  🎥 [CSRF & SSRF Explained | HackerSploit](https://www.youtube.com/watch?v=OyxRSZP5zkg)
+
+* **Lesson 3.5: Tools of the Trade: Burp Suite and OWASP ZAP**
+  🎥 [OWASP ZAP Tutorial | Infosec](https://www.youtube.com/watch?v=t52Tw3y_mN8)
+
+---
+
+## 3. Network Penetration Testing
+
+### Chapter 1: The Penetration Testing Lifecycle
+
+* **Lesson 1.1: Scoping and Reconnaissance**
+  🎥 [OSINT & Recon Basics | The Cyber Mentor](https://www.youtube.com/watch?v=f5G7gAzCRe8)
+
+* **Lesson 1.2: Scanning and Enumeration**
+  🎥 [Nmap Deep Dive | NetworkChuck](https://www.youtube.com/watch?v=5E3N6zFEXsM)
+
+* **Lesson 1.3: Vulnerability Analysis**
+  🎥 [Nessus Vulnerability Scanner Tutorial | HackerSploit](https://www.youtube.com/watch?v=fMCj50TMLv8)
+
+* **Lesson 1.4: Gaining Access and Exploitation**
+  🎥 [Metasploit Basics | Hak5](https://www.youtube.com/watch?v=0k1tbfLvSBY)
+
+* **Lesson 1.5: Post-Exploitation and Reporting**
+  🎥 [Privilege Escalation Basics | IppSec](https://www.youtube.com/watch?v=cfmK6lIYYJA)
+
+### Chapter 2: Tools and Techniques
+
+* **Lesson 2.1: Introduction to Kali Linux**
+  🎥 [Kali Linux Basics | NetworkChuck](https://www.youtube.com/watch?v=8z7e-5mO2Yc)
+
+* **Lesson 2.2: Advanced Nmap Techniques**
+  🎥 [Nmap Scripting Engine Tutorial | HackerSploit](https://www.youtube.com/watch?v=NY6j6kG1BBY)
+
+* **Lesson 2.3: Exploitation with Metasploit**
+  🎥 [Metasploit Unleashed | Offensive Security](https://www.youtube.com/watch?v=nI4V68LQy4o)
+
+* **Lesson 2.4: Password Attacks**
+  🎥 [Password Cracking with Hashcat | IppSec](https://www.youtube.com/watch?v=zUM7i5u1Y2U)
+
+* **Lesson 2.5: Social Engineering and Phishing**
+  🎥 [Social Engineering Attacks Explained | Simplilearn](https://www.youtube.com/watch?v=iq1y3jVb8h8)
+
+### Chapter 3: Advanced Network Attacks
+
+* **Lesson 3.1: MITM and Packet Sniffing**
+  🎥 [Wireshark Tutorial for Beginners | NetworkChuck](https://www.youtube.com/watch?v=TkCSr30UojM)
+
+* **Lesson 3.2: Wireless Network Hacking**
+  🎥 [WiFi Hacking Explained | Null Byte](https://www.youtube.com/watch?v=w7fslZzL-FQ)
+
+* **Lesson 3.3: Bypassing Firewalls and IDS**
+  🎥 [Firewall Evasion Techniques | Hak5](https://www.youtube.com/watch?v=Qg5pEJkF49w)
+
+* **Lesson 3.4: Pivoting and Lateral Movement**
+  🎥 [Lateral Movement in Networks | Red Team Village](https://www.youtube.com/watch?v=pTeW7m7zKIM)
+
+* **Lesson 3.5: DoS and DDoS Attacks**
+  🎥 [DDoS Attacks Explained | Cloudflare](https://www.youtube.com/watch?v=22RkG4v5v14)
+
+* **Lesson 3.6: Tools of the Trade**
+  🎥 [Essential Tools for Pentesting | The Cyber Mentor](https://www.youtube.com/watch?v=yeEw6pXjGZc)
+
+---
+
+## 4. Malware Analysis
+
+### Chapter 1: Foundations of Malware Analysis
+
+* **Lesson 1.1: What is Malware?**
+  🎥 [What is Malware? | Simplilearn](https://www.youtube.com/watch?v=KnsuEJ2K-1M)
+
+* **Lesson 1.2: Malware Analysis Environment**
+  🎥 [Setting up Malware Analysis Lab | HuskyHacks](https://www.youtube.com/watch?v=2y6fbiTqE_M)
+
+* **Lesson 1.3: Static Analysis**
+  🎥 [Static Malware Analysis Tutorial | OALabs](https://www.youtube.com/watch?v=WRLpo-dOV14)
+
+* **Lesson 1.4: Dynamic Analysis**
+  🎥 [Dynamic Malware Analysis | OALabs](https://www.youtube.com/watch?v=PlThWdBBF2A)
+
+### Chapter 2: Reversing and Deobfuscation
+
+* **Lesson 2.1: Assembly Language Basics**
+  🎥 [Assembly Basics for Reverse Engineering | LiveOverflow](https://www.youtube.com/watch?v=75gBFiFtAb8)
+
+* **Lesson 2.2: Disassemblers and Debuggers**
+  🎥 [IDA Pro & Ghidra Basics | MalwareTech](https://www.youtube.com/watch?v=kqs_xY1zHeE)
+
+* **Lesson 2.3: Obfuscation and Packers**
+  🎥 [Malware Obfuscation Explained | OALabs](https://www.youtube.com/watch?v=XLQF2i2hJrw)
+
+* **Lesson 2.4: Deobfuscation Techniques**
+  🎥 [Unpacking Malware | OALabs](https://www.youtube.com/watch?v=gKkR0zBRcx4)
+
+### Chapter 3: Advanced Topics
+
+* **Lesson 3.1: Memory Forensics**
+  🎥 [Memory Forensics with Volatility | 13Cubed](https://www.youtube.com/watch?v=qNlVQ7Rq3aY)
+
+* **Lesson 3.2: Rootkits and Kernel-mode Malware**
+  🎥 [Rootkits Explained | The PC Security Channel](https://www.youtube.com/watch?v=vhBvWBnnCuQ)
+
+* **Lesson 3.3: Mobile Malware**
+  🎥 [Mobile Malware Analysis | NowSecure](https://www.youtube.com/watch?v=UwUZke2hJQo)
+
+* **Lesson 3.4: APT Case Studies**
+  🎥 [APT Attacks Explained | FireEye](https://www.youtube.com/watch?v=U1Ds0uzJKp0)
+
+* **Lesson 3.5: Tools of the Trade**
+  🎥 [Malware Analysis Tools Overview | OALabs](https://www.youtube.com/watch?v=H1Oa7_KXmqw)
+
+---
+
+## 5. Cloud Security Fundamentals
+
+### Chapter 1: Cloud Security Concepts
+
+* **Lesson 1.1: Introduction to Cloud Computing**
+  🎥 [Cloud Computing Explained | Simplilearn](https://www.youtube.com/watch?v=SrE1X3SVkY4)
+
+* **Lesson 1.2: Shared Responsibility Model**
+  🎥 [AWS Shared Responsibility Model | AWS](https://www.youtube.com/watch?v=3UV5X1wROoM)
+
+* **Lesson 1.3: Cloud Threats and Vulnerabilities**
+  🎥 [Cloud Security Risks Explained | Check Point](https://www.youtube.com/watch?v=G2r5y7wi5DA)
+
+* **Lesson 1.4: Securing IAM in the Cloud**
+  🎥 [Cloud IAM Explained | Google Cloud](https://www.youtube.com/watch?v=b5QJseWEQ5E)
+
+### Chapter 2: Securing Cloud Platforms
+
+* **Lesson 2.1: AWS Security Services**
+  🎥 [AWS Security Basics | AWS](https://www.youtube.com/watch?v=FQU1ewZ-RfY)
+
+* **Lesson 2.2: Azure Security Services**
+  🎥 [Azure Security Overview | Microsoft](https://www.youtube.com/watch?v=4H9rkLtGPJw)
+
+* **Lesson 2.3: GCP Security Services**
+  🎥 [Google Cloud Security Basics | Google Cloud](https://www.youtube.com/watch?v=K2rn3Mx0Q2A)
+
+* **Lesson 2.4: Container & Serverless Security**
+  🎥 [Kubernetes & Serverless Security | CNCF](https://www.youtube.com/watch?v=0LNKbcSbrR8)
+
+### Chapter 3: Operations and Compliance
+
+* **Lesson 3.1: CSPM & CWPP**
+  🎥 [CSPM Explained | Prisma Cloud](https://www.youtube.com/watch?v=z8sFnRY0Fuk)
+
+* **Lesson 3.2: Cloud Monitoring and Logging**
+  🎥 [Cloud Monitoring Basics | Google Cloud](https://www.youtube.com/watch?v=wH0yp4C8AIk)
+
+* **Lesson 3.3: Compliance and Governance**
+  🎥 [Cloud Compliance and Governance Explained | IBM Technology](https://www.youtube.com/watch?v=0UQYYQoJd6E)
+
+
+
+---
+
+
+## 6. Advanced Ethical Hacking
+
+### Chapter 1: Evasion and Stealth
+
+* **Lesson 1.1: Bypassing Antivirus & EDR**
+  🎥 [Bypassing Antivirus Basics | I](https://www.youtube.com/watch?v=y2z0XfJTH1o)[ppSec](https://www.youtube.com/watch?v=y2z0XfJTH1o)
+
+* **Lesson 1.2: Evading Firewalls and IDS**
+  🎥 [Firewall Evasion Techniques | Hak5](https://www.youtube.com/watch?v=Qg5pEJkF49w)
+
+* **Lesson 1.3: Covering Your Tracks**
+  🎥 [Clearing Logs & Stealth | The Cyber Mentor](https://www.youtube.com/watch?v=7tx1xVpDPnE)
+
+* **Lesson 1.4: Anonymity and OpSec**
+  🎥 [Tor, VPNs & OpSec Basics | NetworkChuck](https://www.youtube.com/watch?v=8XjmH0I0sZs)
+
+### Chapter 2: Exploit Development
+
+* **Lesson 2.1: Buffer Overflows**
+  🎥 [Buffer Overflow Exploits | LiveOverflow](https://www.youtube.com/watch?v=1S0aBV-Waeo)
+
+* **Lesson 2.2: Shellcode Development**
+  🎥 [Shellcode Explained | LiveOverflow](https://www.youtube.com/watch?v=2nsK3dGQ9mQ)
+
+* **Lesson 2.3: Exploit Development Tools**
+  🎥 [Exploit Development Basics | IppSec](https://www.youtube.com/watch?v=tA1WqJgA1iM)
+
+* **Lesson 2.4: Reverse Engineering for Exploits**
+  🎥 [Reverse Engineering Crash Course | LiveOverflow](https://www.youtube.com/watch?v=5j7G2aGfLCU)
+
+### Chapter 3: Red Teaming & Advanced Attacks
+
+* **Lesson 3.1: Red Team vs Blue Team**
+  🎥 [Red Team vs Blue Team Explained | Simply Cyber](https://www.youtube.com/watch?v=6GzVJk3XGcs)
+
+* **Lesson 3.2: Advanced Social Engineering**
+  🎥 [Social Engineering Attacks | David Bombal](https://www.youtube.com/watch?v=8ofn6mQT5nI)
+
+* **Lesson 3.3: Physical Security Testing**
+  🎥 [Physical Penetration Testing | Deviant Ollam](https://www.youtube.com/watch?v=3n72f3K6h8Q)
+
+* **Lesson 3.4: Command and Control (C2) Frameworks**
+  🎥 [Cobalt Strike & C2 Basics | The Cyber Mentor](https://www.youtube.com/watch?v=UfS0lR5sGJY)
+
+### Chapter 4: Advanced Defensive Evasion
+
+* **Lesson 4.1: Living off the Land Binaries (LOLBins)**
+  🎥 [LOLBins Explained | IppSec](https://www.youtube.com/watch?v=H5C6U5xP_kk)
+
+* **Lesson 4.2: Fileless Malware Techniques**
+  🎥 [Fileless Malware Explained | The PC Security Channel](https://www.youtube.com/watch?v=G2Sjo4YjaVQ)
+
+* **Lesson 4.3: Persistence Mechanisms**
+  🎥 [Persistence in Windows | IppSec](https://www.youtube.com/watch?v=Lv9sOio7Vpo)
+
+* **Lesson 4.4: Privilege Escalation Techniques**
+  🎥 [Linux & Windows Privilege Escalation | The Cyber Mentor](https://www.youtube.com/watch?v=DSw1N3C5WqQ)
+
+### Chapter 5: Tools of the Trade
+
+* **Lesson 5.1: Cobalt Strike Basics**
+  🎥 [Cobalt Strike Tutorial | HuskyHacks](https://www.youtube.com/watch?v=U6vMy1yj2v4)
+
+* **Lesson 5.2: Empire Framework**
+  🎥 [Empire C2 Framework | IppSec](https://www.youtube.com/watch?v=1sQH2IovS2o)
+
+* **Lesson 5.3: Mimikatz and Credential Dumping**
+  🎥 [Mimikatz Explained | Black Hills InfoSec](https://www.youtube.com/watch?v=3P9h-o3UacQ)
+
+* **Lesson 5.4: Advanced PowerShell Attacks**
+  🎥 [Offensive PowerShell | Black Hat](https://www.youtube.com/watch?v=zS2o3NfTYjA)
+
+* **Lesson 5.5: Custom Red Team Tools**
+  🎥 [Building Red Team Tools | The Cyber Mentor](https://www.youtube.com/watch?v=bHqBHRH0D2M)
+
+---
+
+
+

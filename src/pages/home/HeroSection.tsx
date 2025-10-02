@@ -1,8 +1,9 @@
 // src/pages/Home/HeroSection.tsx
 import { Link } from "react-router";
 import { useState, useEffect, useRef } from "react";
+import cyberSecurityIllustration from "../../assets/cybersecurityillustration.png";
 
-// Custom hook for one-time typing effect
+
 function useTypingEffect(text: string, speed: number = 100) {
   const [displayText, setDisplayText] = useState("");
   const [isComplete, setIsComplete] = useState(false);
@@ -107,7 +108,7 @@ export default function HeroSection() {
           }`}
         >
           <img
-            src="/hero-image.png"   // 🖼️ بدّلها بصورة بانر عندك (تحطها في public/)
+            src={cyberSecurityIllustration}
             alt="Cyber Security Illustration"
             className="w-full max-w-lg hover:scale-105 transition-transform duration-300"
           />

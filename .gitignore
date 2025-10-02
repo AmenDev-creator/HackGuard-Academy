@@ -7,8 +7,11 @@ build/
 
 # Env secrets
 .env
-.env.*.local
 .env.local
+.env.*.local
+.env.production
+.env.staging
+.env.development
 
 # IDE / OS
 .vscode/
@@ -51,3 +54,8 @@ dist-ssr
 # firebase local files
 .firebase/
 firebase-debug.log
+.firebaserc
+
+# Functions
+functions/node_modules/
+functions/.firebase/

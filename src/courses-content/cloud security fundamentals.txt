@@ -1,0 +1,45 @@
+## 5. Cloud Security Fundamentals
+
+### Chapter 1: Cloud Security Concepts
+
+* **Lesson 1.1: Introduction to Cloud Computing**
+  🎥 [Cloud Computing Explained | Simplilearn](https://www.youtube.com/watch?v=SrE1X3SVkY4)
+
+* **Lesson 1.2: Shared Responsibility Model**
+  🎥 [AWS Shared Responsibility Model | AWS](https://www.youtube.com/watch?v=3UV5X1wROoM)
+
+* **Lesson 1.3: Cloud Threats and Vulnerabilities**
+  🎥 [Cloud Security Risks Explained | Check Point](https://www.youtube.com/watch?v=G2r5y7wi5DA)
+
+* **Lesson 1.4: Securing IAM in the Cloud**
+  🎥 [Cloud IAM Explained | Google Cloud](https://www.youtube.com/watch?v=b5QJseWEQ5E)
+
+### Chapter 2: Securing Cloud Platforms
+
+* **Lesson 2.1: AWS Security Services**
+  🎥 [AWS Security Basics | AWS](https://www.youtube.com/watch?v=FQU1ewZ-RfY)
+
+* **Lesson 2.2: Azure Security Services**
+  🎥 [Azure Security Overview | Microsoft](https://www.youtube.com/watch?v=4H9rkLtGPJw)
+
+* **Lesson 2.3: GCP Security Services**
+  🎥 [Google Cloud Security Basics | Google Cloud](https://www.youtube.com/watch?v=K2rn3Mx0Q2A)
+
+* **Lesson 2.4: Container & Serverless Security**
+  🎥 [Kubernetes & Serverless Security | CNCF](https://www.youtube.com/watch?v=0LNKbcSbrR8)
+
+### Chapter 3: Operations and Compliance
+
+* **Lesson 3.1: CSPM & CWPP**
+  🎥 [CSPM Explained | Prisma Cloud](https://www.youtube.com/watch?v=z8sFnRY0Fuk)
+
+* **Lesson 3.2: Cloud Monitoring and Logging**
+  🎥 [Cloud Monitoring Basics | Google Cloud](https://www.youtube.com/watch?v=wH0yp4C8AIk)
+
+* **Lesson 3.3: Compliance and Governance**
+  🎥 [Cloud Compliance and Governance Explained | IBM Technology](https://www.youtube.com/watch?v=0UQYYQoJd6E)
+
+
+
+---
+

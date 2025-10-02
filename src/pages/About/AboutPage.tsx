@@ -4,7 +4,7 @@ export default function AboutPage() {
     <section className="bg-white py-16">
       <div className="container mx-auto px-6 text-center">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          About <span className="text-lime-500">CyberAcademy</span>
+          About <span className="text-lime-500">HackGuard Academy</span>
         </h1>
         <p className="text-gray-700 max-w-3xl mx-auto mb-8">
           CyberAcademy is a modern platform that provides both free and paid

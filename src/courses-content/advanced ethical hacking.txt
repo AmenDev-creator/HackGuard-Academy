@@ -1,0 +1,77 @@
+## 6. Advanced Ethical Hacking
+
+### Chapter 1: Evasion and Stealth
+
+* **Lesson 1.1: Bypassing Antivirus & EDR**
+  🎥 [Bypassing Antivirus Basics | I](https://www.youtube.com/watch?v=y2z0XfJTH1o)[ppSec](https://www.youtube.com/watch?v=y2z0XfJTH1o)
+
+* **Lesson 1.2: Evading Firewalls and IDS**
+  🎥 [Firewall Evasion Techniques | Hak5](https://www.youtube.com/watch?v=Qg5pEJkF49w)
+
+* **Lesson 1.3: Covering Your Tracks**
+  🎥 [Clearing Logs & Stealth | The Cyber Mentor](https://www.youtube.com/watch?v=7tx1xVpDPnE)
+
+* **Lesson 1.4: Anonymity and OpSec**
+  🎥 [Tor, VPNs & OpSec Basics | NetworkChuck](https://www.youtube.com/watch?v=8XjmH0I0sZs)
+
+### Chapter 2: Exploit Development
+
+* **Lesson 2.1: Buffer Overflows**
+  🎥 [Buffer Overflow Exploits | LiveOverflow](https://www.youtube.com/watch?v=1S0aBV-Waeo)
+
+* **Lesson 2.2: Shellcode Development**
+  🎥 [Shellcode Explained | LiveOverflow](https://www.youtube.com/watch?v=2nsK3dGQ9mQ)
+
+* **Lesson 2.3: Exploit Development Tools**
+  🎥 [Exploit Development Basics | IppSec](https://www.youtube.com/watch?v=tA1WqJgA1iM)
+
+* **Lesson 2.4: Reverse Engineering for Exploits**
+  🎥 [Reverse Engineering Crash Course | LiveOverflow](https://www.youtube.com/watch?v=5j7G2aGfLCU)
+
+### Chapter 3: Red Teaming & Advanced Attacks
+
+* **Lesson 3.1: Red Team vs Blue Team**
+  🎥 [Red Team vs Blue Team Explained | Simply Cyber](https://www.youtube.com/watch?v=6GzVJk3XGcs)
+
+* **Lesson 3.2: Advanced Social Engineering**
+  🎥 [Social Engineering Attacks | David Bombal](https://www.youtube.com/watch?v=8ofn6mQT5nI)
+
+* **Lesson 3.3: Physical Security Testing**
+  🎥 [Physical Penetration Testing | Deviant Ollam](https://www.youtube.com/watch?v=3n72f3K6h8Q)
+
+* **Lesson 3.4: Command and Control (C2) Frameworks**
+  🎥 [Cobalt Strike & C2 Basics | The Cyber Mentor](https://www.youtube.com/watch?v=UfS0lR5sGJY)
+
+### Chapter 4: Advanced Defensive Evasion
+
+* **Lesson 4.1: Living off the Land Binaries (LOLBins)**
+  🎥 [LOLBins Explained | IppSec](https://www.youtube.com/watch?v=H5C6U5xP_kk)
+
+* **Lesson 4.2: Fileless Malware Techniques**
+  🎥 [Fileless Malware Explained | The PC Security Channel](https://www.youtube.com/watch?v=G2Sjo4YjaVQ)
+
+* **Lesson 4.3: Persistence Mechanisms**
+  🎥 [Persistence in Windows | IppSec](https://www.youtube.com/watch?v=Lv9sOio7Vpo)
+
+* **Lesson 4.4: Privilege Escalation Techniques**
+  🎥 [Linux & Windows Privilege Escalation | The Cyber Mentor](https://www.youtube.com/watch?v=DSw1N3C5WqQ)
+
+### Chapter 5: Tools of the Trade
+
+* **Lesson 5.1: Cobalt Strike Basics**
+  🎥 [Cobalt Strike Tutorial | HuskyHacks](https://www.youtube.com/watch?v=U6vMy1yj2v4)
+
+* **Lesson 5.2: Empire Framework**
+  🎥 [Empire C2 Framework | IppSec](https://www.youtube.com/watch?v=1sQH2IovS2o)
+
+* **Lesson 5.3: Mimikatz and Credential Dumping**
+  🎥 [Mimikatz Explained | Black Hills InfoSec](https://www.youtube.com/watch?v=3P9h-o3UacQ)
+
+* **Lesson 5.4: Advanced PowerShell Attacks**
+  🎥 [Offensive PowerShell | Black Hat](https://www.youtube.com/watch?v=zS2o3NfTYjA)
+
+* **Lesson 5.5: Custom Red Team Tools**
+  🎥 [Building Red Team Tools | The Cyber Mentor](https://www.youtube.com/watch?v=bHqBHRH0D2M)
+
+---
+

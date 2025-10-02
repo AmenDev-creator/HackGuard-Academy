@@ -2,25 +2,28 @@
 import { Link } from "react-router";
 import { useState, useEffect, useRef } from "react";
 
+import introImg from '../../assets/introductiontocybersecurity.jpg';
+import webImg from '../../assets/webapplicationsecurity.jpg';
+import netImg from '../../assets/networkpenetrationtesting.jpg';
 
 const courses = [
   {
     id: 1,
     title: "Introduction to Cyber Security",
     description: "Learn the basics of cyber security and ethical hacking.",
-    
+    image: introImg,
   },
   {
     id: 2,
     title: "Web Application Security",
     description: "Understand how web apps are hacked and how to secure them.",
-    
+    image: webImg,
   },
   {
     id: 3,
     title: "Network Penetration Testing",
     description: "Hands-on labs to master network security testing.",
-    
+    image: netImg,
   },
 ];
 
@@ -38,13 +41,14 @@ export default function CoursesPreview() {
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentRef = sectionRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -77,10 +81,10 @@ export default function CoursesPreview() {
               }}
             >
               <img
-                
-                alt={course.title}
-                className="rounded-xl w-full h-40 object-cover mb-4 transition-transform duration-300 hover:scale-105"
-              />
+                 src={course.image}
+                 alt={course.title}
+                 className="rounded-xl w-full h-40 object-cover mb-4 transition-transform duration-300 hover:scale-105"
+               />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 {course.title}
               </h3>
