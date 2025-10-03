@@ -6,13 +6,11 @@ Built with **React + TypeScript + TailwindCSS**, and powered by **Firebase (Auth
 ---
 
 ## 🚀 Features
-- 🔑 Authentication: Signup/Login with Email + Google + Phone OTP
-- 📊 User Dashboard: Courses, Labs, Achievements, Progress Charts
+- 🔑 Authentication: Signup/Login with Email + Google 
+- 📊 User Dashboard: Courses, Labs, Progress Charts
 - 📝 Audit Logs: Track user activity (login, enrollments, lab attempts)
-- 📰 Cyber News Feed: Security updates with AI summaries
 - 🎓 Course System: Free & Paid plans with detailed tools and labs
-- 🌙 Dark/Light Mode Toggle
-- 🔒 Secure Firebase integration with OTP verification  
+- 🔒 Secure Firebase integration 
 
 ---
 
